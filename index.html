@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbearia Novo Visual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Barbearia Novo Visual</h1>
+  <p><i>Seu estilo, nosso cuidado</i></p>
+
+  <button class="button" onclick="showBooking()">Agendar</button>
+  <button class="button" onclick="showLogin()">Painel do Barbeiro</button>
+
+  <!-- Área de Agendamento -->
+  <div id="bookingArea" style="display:none;">
+    <h2>Agendamento</h2>
+    <div id="barberList"></div>
+    <button class="button" onclick="goHome()">← Voltar</button>
+  </div>
+
+  <!-- Login Barbeiro -->
+  <div id="loginArea" style="display:none;">
+    <h2>Login do Barbeiro</h2>
+    <input type="text" id="barberName" placeholder="Nome"><br>
+    <input type="password" id="barberPass" placeholder="Senha"><br>
+    <button class="button" onclick="login()">Entrar</button>
+    <button class="button" onclick="goHome()">← Voltar</button>
+  </div>
+
+  <!-- Painel do Barbeiro -->
+  <div id="barberPanel" style="display:none;">
+    <h2>Painel do Barbeiro</h2>
+    <div id="barberProfile"></div>
+
+    <h3>Editar Perfil</h3>
+    <input type="text" id="profilePic" placeholder="URL da Foto"><br>
+    <textarea id="profileDesc" placeholder="Descrição"></textarea><br>
+    <button class="button" onclick="updateProfile()">Salvar Alterações</button>
+
+    <h3>Serviços e Preços</h3>
+    <div id="serviceList"></div>
+    <button class="button" onclick="goHome()">← Voltar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
